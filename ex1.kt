@@ -23,13 +23,13 @@ fun lerEImprimirConfiguracoes(nomeArquivo: String = "config.json") {
         val configLida = Json.decodeFromString<ConfiguracaoUsuario>(jsonString)
 
         println("\n--- Configurações Lidas do Arquivo ---")
-        println("👤 Nome: ${configLida.nome}")
-        println("🌐 Idioma: ${configLida.idioma}")
-        println("🎨 Tema: ${configLida.tema}")
+        println("Nome: ${configLida.nome}")
+        println("Idioma: ${configLida.idioma}")
+        println("Tema: ${configLida.tema}")
         println("------------------------------------")
 
     } catch (e: Exception) {
-        println("❌ Ocorreu um erro ao ler ou decodificar o arquivo: ${e.message}")
+        println("Ocorreu um erro ao ler ou decodificar o arquivo: ${e.message}")
     }
 }
 
@@ -47,13 +47,13 @@ fun main() {
         val nomeArquivo = "config.json"
         File(nomeArquivo).writeText(jsonString)
 
-        println("✅ Configurações salvas com sucesso no arquivo '$nomeArquivo'.")
+        println("Configurações salvas com sucesso no arquivo '$nomeArquivo'.")
         println("\nConteúdo do arquivo gerado:")
         println(jsonString)
 
         lerEImprimirConfiguracoes(nomeArquivo)
 
     } catch (e: IOException) {
-        println("❌ Ocorreu um erro ao salvar o arquivo: ${e.message}")
+        println("Ocorreu um erro ao salvar o arquivo: ${e.message}")
     }
 }
