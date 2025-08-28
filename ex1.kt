@@ -14,7 +14,7 @@ data class ConfiguracaoUsuario(
 fun lerEImprimirConfiguracoes(nomeArquivo: String = "config.json") {
     val arquivo = File(nomeArquivo)
     if (!arquivo.exists()) {
-        println("❌ Erro: O arquivo '$nomeArquivo' não foi encontrado.")
+        println("Erro: O arquivo '$nomeArquivo' não foi encontrado.")
         return
     }
 
